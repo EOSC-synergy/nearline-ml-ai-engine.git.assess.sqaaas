@@ -1,0 +1,62 @@
+config:
+  credentials: []
+  project_repos:
+    git.man.poznan.pl/stash/scm/eosc-rs/nearline-ml-ai-engine:
+      branch: master
+      repo: https://git.man.poznan.pl/stash/scm/eosc-rs/nearline-ml-ai-engine.git
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/1.7.7
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      git.man.poznan.pl/stash/scm/eosc-rs/nearline-ml-ai-engine git:
+        commands:
+        - /usr/bin/env sh .sqa/script.nippy-cerise-wombat.sh
+        container: qc.acc_sickly-tangerine-lizard
+  QC.Doc:
+    repos:
+      git.man.poznan.pl/stash/scm/eosc-rs/nearline-ml-ai-engine find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.paltry-pink-nightingale.sh
+        container: qc.doc_bumpy-cobalt-mau
+      git.man.poznan.pl/stash/scm/eosc-rs/nearline-ml-ai-engine git:
+        commands:
+        - /usr/bin/env sh .sqa/script.blurry-chocolate-barnacle.sh
+        container: qc.doc_gummy-blue-stoat
+      git.man.poznan.pl/stash/scm/eosc-rs/nearline-ml-ai-engine markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.ready-dandelion-axolotl.sh
+        container: qc.doc_shaggy-beige-hedgehog
+  QC.Lic:
+    repos:
+      git.man.poznan.pl/stash/scm/eosc-rs/nearline-ml-ai-engine licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.droopy-pear-crane.sh
+        container: qc.lic_whiny-wheat-bloodhound
+  QC.Sec:
+    repos:
+      git.man.poznan.pl/stash/scm/eosc-rs/nearline-ml-ai-engine bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.queasy-cyan-fowl.sh
+        container: qc.sec_goopy-khaki-malamute
+  QC.Sty:
+    repos:
+      git.man.poznan.pl/stash/scm/eosc-rs/nearline-ml-ai-engine flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.cranky-jade-coati.sh
+        container: qc.sty_surly-jade-cichlid
+      git.man.poznan.pl/stash/scm/eosc-rs/nearline-ml-ai-engine hadolint:
+        commands:
+        - /usr/bin/env sh .sqa/script.whiny-violet-mau.sh
+        container: qc.sty_lovely-silver-kudu
+  QC.Ver:
+    repos:
+      git.man.poznan.pl/stash/scm/eosc-rs/nearline-ml-ai-engine get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.surly-cerise-bullfrog.sh
+        container: qc.ver_nippy-sapphire-serval
+timeout: 5400
