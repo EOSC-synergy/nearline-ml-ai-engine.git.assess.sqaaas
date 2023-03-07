@@ -15,58 +15,58 @@ sqa_criteria:
     repos:
       git.man.poznan.pl/stash/scm/eosc-rs/nearline-ml-ai-engine git:
         commands:
-        - /usr/bin/env sh .sqa/script.scanty-razzmatazz-shark.sh
-        container: qc.acc_gamy-mauve-capybara
+        - /usr/bin/env sh .sqa/script.bluesy-cerise-quokka.sh
+        container: qc.acc_sunny-sepia-eagle
   QC.Doc:
     repos:
       git.man.poznan.pl/stash/scm/eosc-rs/nearline-ml-ai-engine find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.baggy-coral-rattlesnake.sh
-        container: qc.doc_lovely-ochre-bloodhound
+        - /usr/bin/env sh .sqa/script.zippy-tan-heron.sh
+        container: qc.doc_ugly-thistle-caiman
       git.man.poznan.pl/stash/scm/eosc-rs/nearline-ml-ai-engine git:
         commands:
-        - /usr/bin/env sh .sqa/script.dorky-cerulean-dogfish.sh
-        container: qc.doc_sloppy-cyan-wrasse
+        - /usr/bin/env sh .sqa/script.bumpy-indigo-ray.sh
+        container: qc.doc_snippy-cobalt-bobcat
       git.man.poznan.pl/stash/scm/eosc-rs/nearline-ml-ai-engine markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.silly-sapphire-dragonfly.sh
-        container: qc.doc_smelly-amethyst-heron
+        - /usr/bin/env sh .sqa/script.pretty-apricot-rottweiler.sh
+        container: qc.doc_stealthy-tangerine-mist
   QC.Lic:
     repos:
       git.man.poznan.pl/stash/scm/eosc-rs/nearline-ml-ai-engine licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.zippy-plum-wombat.sh
-        container: qc.lic_sickly-violet-beaver
+        - /usr/bin/env sh .sqa/script.goopy-brown-spaniel.sh
+        container: qc.lic_cranky-alizarin-chamois
   QC.Met:
     repos:
       git.man.poznan.pl/stash/scm/eosc-rs/nearline-ml-ai-engine cff-converter-python:
         commands:
-        - /usr/bin/env sh .sqa/script.tasty-orchid-clam.sh
-        container: qc.met_hasty-gold-ferret
+        - /usr/bin/env sh .sqa/script.goopy-alizarin-fox.sh
+        container: qc.met_stinky-jade-ray
   QC.Sec:
     repos:
       git.man.poznan.pl/stash/scm/eosc-rs/nearline-ml-ai-engine bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.seedy-rose-butterfly.sh
-        container: qc.sec_shabby-dandelion-bear
+        - /usr/bin/env sh .sqa/script.freaky-ochre-angora.sh
+        container: qc.sec_flaky-auburn-frise
   QC.Sty:
     repos:
       git.man.poznan.pl/stash/scm/eosc-rs/nearline-ml-ai-engine flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.snoopy-emerald-malamute.sh
-        container: qc.sty_silly-sepia-dog
+        - /usr/bin/env sh .sqa/script.gamy-malachite-collie.sh
+        container: qc.sty_wimpy-magenta-audemer
       git.man.poznan.pl/stash/scm/eosc-rs/nearline-ml-ai-engine hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.stuffy-indigo-tzu.sh
-        container: qc.sty_randy-tomato-collie
+        - /usr/bin/env sh .sqa/script.tacky-teal-pinscher.sh
+        container: qc.sty_sunny-auburn-armadillo
       git.man.poznan.pl/stash/scm/eosc-rs/nearline-ml-ai-engine rubocop:
         commands:
-        - /usr/bin/env sh .sqa/script.foggy-gamboge-cockroach.sh
-        container: qc.sty_gimpy-heliotrope-chimpanzee
+        - /usr/bin/env sh .sqa/script.pokey-taupe-swan.sh
+        container: qc.sty_jumpy-carmine-duck
   QC.Ver:
     repos:
       git.man.poznan.pl/stash/scm/eosc-rs/nearline-ml-ai-engine get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.squeaky-pear-tortoise.sh
-        container: qc.ver_baggy-ecru-impala
+        - /usr/bin/env sh .sqa/script.surly-magenta-fowl.sh
+        container: qc.ver_gimpy-brown-badger
 timeout: 5400
